@@ -16,6 +16,10 @@ public class PlayerInteractUI : MonoBehaviour
         {
             Hide();
         }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Hide();
+        }
     }
     private void Show()
     {

@@ -13,8 +13,9 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> sentences;
 
+    public DialogueUI dialogueUI;
 
-    
+
     void Start()
     {
         sentences = new Queue<string>();
@@ -71,6 +72,7 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         Debug.Log("End of conversation");
+        FindFirstObjectByType<DialogueUI>().Hide();
     }
     
 }
