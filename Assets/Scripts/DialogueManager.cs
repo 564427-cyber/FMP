@@ -18,7 +18,7 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
-        sentences = new Queue<string>();
+        sentences = new Queue<string>(); //creats a queue of sentences
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -27,7 +27,7 @@ public class DialogueManager : MonoBehaviour
 
         nameText.text = dialogue.name;
 
-        sentences.Clear();
+        sentences.Clear(); //clears all previous sentences so when u speak u start a fresh
 
         foreach (string sentence in dialogue.sentences)
         {

@@ -7,13 +7,13 @@ public class NPCInteractable : MonoBehaviour
     public void Interact()
     {
         Debug.Log("Interact!");
-        Show();
-        trigger.TriggerDialogue();
+        Show(); // method for showing
+        trigger.TriggerDialogue(); //triggers text from NPC
     }
 
     public void Show()
     {
         Debug.Log("Showing dialogue UI");
-        dialogueUI.Show();
+        dialogueUI.Show(); // shows dialogue UI
     }
 }

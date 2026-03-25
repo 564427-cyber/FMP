@@ -346,6 +346,50 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &78317671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 78317673}
+  - component: {fileID: 78317672}
+  m_Layer: 0
+  m_Name: ToGame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &78317672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78317671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 578211f1570d7084fbacabd667407541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ToGameScript
+--- !u!4 &78317673
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78317671}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 509.57336, y: -0.00002, z: 7590.95}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &101552005
 GameObject:
   m_ObjectHideFlags: 0
@@ -2411,7 +2455,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 628168890}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 78317672}
+        m_TargetAssemblyTypeName: ToGameScript, Assembly-CSharp
+        m_MethodName: LoadMainScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &628168890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3188,6 +3244,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2119519525}
   - {fileID: 628168888}
   - {fileID: 1136465376}
   - {fileID: 101552006}
@@ -4203,8 +4260,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 981012185}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -4712.945}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4212,11 +4269,11 @@ RectTransform:
   - {fileID: 1947922580}
   - {fileID: 844359580}
   - {fileID: 199465267}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1577872138}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -771.18054, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &1026983851
@@ -6038,8 +6095,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2119519525}
   - {fileID: 741662508}
+  - {fileID: 981012189}
+  - {fileID: 1789397446}
   m_Father: {fileID: 2100540595}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1593638579
@@ -6479,7 +6537,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1789397443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6562,7 +6620,7 @@ RectTransform:
   - {fileID: 388142248}
   - {fileID: 19629721}
   - {fileID: 635330591}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1577872138}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7659,7 +7717,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2100540592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7851,7 +7909,7 @@ Transform:
   - {fileID: 843066973}
   - {fileID: 1082804884}
   - {fileID: 1645664021}
-  m_Father: {fileID: 1577872138}
+  m_Father: {fileID: 741662508}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -7860,6 +7918,5 @@ SceneRoots:
   - {fileID: 571321258}
   - {fileID: 291619579}
   - {fileID: 2100540595}
-  - {fileID: 981012189}
-  - {fileID: 1789397446}
   - {fileID: 1886757076}
+  - {fileID: 78317673}
