@@ -15,7 +15,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
     float verticalVelocity;
     float gravity = -9.81f;
-    float jumpForce = 2f;
+    float jumpForce = 1.7f;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -44,7 +44,7 @@ public class ThirdPersonMovement : MonoBehaviour
             verticalVelocity = -2f;
         }
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             verticalVelocity = Mathf.Sqrt(jumpForce * -2f * gravity);
         }
