@@ -24,10 +24,8 @@ public class ThirdPersonMovement : MonoBehaviour
     bool isGrounded;
 
     void Update()
-    {
-        
-        DoMovement();
-        
+    {        
+        DoMovement();        
     }
 
     void DoMovement()
