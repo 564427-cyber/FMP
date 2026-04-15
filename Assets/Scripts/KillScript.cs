@@ -9,10 +9,6 @@ public class KillScript : MonoBehaviour
         Debug.Log("Player Dead");
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        SceneManager.LoadScene(0);
-        Debug.Log("player Dead");
-    }
+   
 }
 
