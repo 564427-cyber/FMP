@@ -17,6 +17,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/City.unity
     guid: 6852db5f46ff35549851123ebbcca0cf
+  - enabled: 1
+    path: Assets/Scenes/Forest(corrupt).unity
+    guid: 113b612eb9fe9ca4c968e4bd47d24843
+  - enabled: 1
+    path: Assets/Scenes/Cave(corrupt).unity
+    guid: d9683f8151e90464f80363fd35e9350a
+  - enabled: 1
+    path: Assets/Scenes/City(corrupt).unity
+    guid: e79f436af44a4b845ac7ea809cb6966a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
