@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -26,6 +27,16 @@ public class KeyPadCorrupt : MonoBehaviour
         Hide();
     }
 
+    private void Update()
+    {
+        if(charHolder.text == "FAILED")
+        {
+            charHolder.text = null;
+        }
+    }
+
+   
+
 
 
     public void Show()
@@ -45,51 +56,51 @@ public class KeyPadCorrupt : MonoBehaviour
         Show();
     }
 
-    public void b1()
+    public void B1()
     {
-        charHolder.text = charHolder.text + "1";
+        charHolder.text += "1";
     }
-    public void b2()
+    public void B2()
     {
-        charHolder.text = charHolder.text + "2";
+        charHolder.text += "2";
     }
-    public void b3()
+    public void B3()
     {
-        charHolder.text = charHolder.text + "3";
+        charHolder.text += "3";
     }
-    public void b4()
+    public void B4()
     {
-        charHolder.text = charHolder.text + "4";
+        charHolder.text += "4";
     }
-    public void b5()
+    public void B5()
     {
-        charHolder.text = charHolder.text + "5";
+        charHolder.text += "5";
     }
-    public void b6()
+    public void B6()
     {
-        charHolder.text = charHolder.text + "6";
+        charHolder.text += "6";
     }
-    public void b7()
+    public void B7()
     {
-        charHolder.text = charHolder.text + "7";
+        charHolder.text += "7";
     }
-    public void b8()
+    public void B8()
     {
-        charHolder.text = charHolder.text + "8";
+        charHolder.text += "8";
     }
-    public void b9()
+    public void B9()
     {
-        charHolder.text = charHolder.text + "9";
+        charHolder.text += "9";
     }
-    public void b0()
+    public void B0()
     {
-        charHolder.text = charHolder.text + "0";
+        charHolder.text += "0";
     }
-    public void clearEvent()
+    public void ClearEvent()
     {
         charHolder.text = null;
     }
-    public void enterEvent()
+    public void EnterEvent()
     {
 
         if (charHolder.text == "522912")
@@ -102,6 +113,7 @@ public class KeyPadCorrupt : MonoBehaviour
         else
         {
             Debug.Log("Failed");
+            charHolder.text = "FAILED";
         }
     }
 }
