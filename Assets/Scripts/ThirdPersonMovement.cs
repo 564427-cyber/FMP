@@ -89,6 +89,8 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             animator.SetBool("Run", true);
             animator.SetBool("Walk", false);
+
+            Debug.Log("Is Running" + isRunning);
             
         }
         else if (isMoving)

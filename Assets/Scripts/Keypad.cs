@@ -30,14 +30,20 @@ public class Keypad : MonoBehaviour
 
     private void Update()
     {
-        if(charHolder.text == "FAILED")
+        Fail();
+    }
+
+
+    public void Fail()
+    {
+        if (charHolder != null) 
         {
-            charHolder.text = null;
-           
+            if (charHolder.text == "FAILED")
+            {
+                charHolder.text = ""; 
+            }
         }
     }
-   
-
 
 
     public void Show()
