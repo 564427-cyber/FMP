@@ -6,7 +6,8 @@ public class ThirdPersonMovement : MonoBehaviour
 
     public CharacterController controller;
     public Transform cam;
-    public float speed = 6f;
+    public float walkSpeed = 6f;
+    public float runSpeed = 10f;
     public float turnSmoothTime = 0.1f;
     float smoothTurnVelocity;
     Vector3 direction;
@@ -22,6 +23,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public LayerMask groundMask;
 
     bool isGrounded;
+    bool runPressed;
 
 
     //Animation
@@ -34,7 +36,11 @@ public class ThirdPersonMovement : MonoBehaviour
     }
 
     void Update()
-    {        
+    {
+        //read inputs
+         runPressed = Input.GetKey(KeyCode.LeftShift);
+
+
         DoMovement();        
         DoAnimation();
     }
@@ -43,9 +49,21 @@ public class ThirdPersonMovement : MonoBehaviour
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
+        float speed;
         direction = new Vector3(horizontal, 0f, vertical).normalized;
 
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        //check for run
+        if( runPressed == true)
+        {
+            speed = runSpeed;
+        }
+        else
+        {
+            speed = walkSpeed;
+        }
+
+
+            isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && verticalVelocity < 0)
         {
@@ -78,7 +96,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
     void DoAnimation()
     {
-        bool runPressed = Input.GetKey(KeyCode.LeftShift);
+        
         bool jumpPressed = Input.GetKeyDown(KeyCode.Space) && isGrounded;
         bool jumpReset = Input.GetKeyUp(KeyCode.Space);
 
