@@ -301,6 +301,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 350519078}
+        m_TargetAssemblyTypeName: PlaySounds, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &48212753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3027,7 +3039,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &741662508
 Transform:
   m_ObjectHideFlags: 0
@@ -5056,7 +5068,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1168554475
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6159,7 +6171,6 @@ GameObject:
   - component: {fileID: 1523962266}
   - component: {fileID: 1523962265}
   - component: {fileID: 1523962264}
-  - component: {fileID: 1523962263}
   m_Layer: 5
   m_Name: Controls
   m_TagString: Untagged
@@ -6194,21 +6205,6 @@ RectTransform:
   m_AnchoredPosition: {x: -135.18054, y: 303.5}
   m_SizeDelta: {x: 1212, y: 460}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1523962263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1523962261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 392782ffb8ca65642a92709048acd1d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VolumeSettings
-  mixer: {fileID: 24100000, guid: 7b33038887a3da1449e88e1c8b3f9654, type: 2}
-  musicSlider: {fileID: 0}
-  sfxSlider: {fileID: 0}
 --- !u!114 &1523962264
 MonoBehaviour:
   m_ObjectHideFlags: 0
