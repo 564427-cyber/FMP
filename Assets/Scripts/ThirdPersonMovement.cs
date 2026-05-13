@@ -102,12 +102,13 @@ public class ThirdPersonMovement : MonoBehaviour
 
         bool isMoving = direction.magnitude > 0.1f;
         bool isRunning = isMoving && runPressed;
-
+        /*
         if(runPressed && !isMoving)
         {
             animator.SetBool("Run", false);
             animator.SetBool("Walk", false);
-        }
+        } 
+        */
 
 
 
@@ -140,13 +141,26 @@ public class ThirdPersonMovement : MonoBehaviour
             animator.SetBool("Jump", false);
         }
 
+        if (!isRunning)
+        {
+            animator.SetBool("Run", false);
+        }
+
+        if (!isMoving)
+        {
+            animator.SetBool("Run", false);
+            animator.SetBool("Walk", false);
+        }
+
+        /*
         if(isRunning && jumpPressed)
         {
             animator.SetBool("Jump", true);
             animator.SetBool("Run", false);
         }
+        */
 
-       
+
     }
 
 
