@@ -7,6 +7,7 @@ public class KillScript : MonoBehaviour
     {
         SceneManager.LoadScene(2);
         Debug.Log("Player Dead");
+       //stop
     }
 
    

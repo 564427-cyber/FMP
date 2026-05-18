@@ -102,6 +102,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
         bool isMoving = direction.magnitude > 0.1f;
         bool isRunning = isMoving && runPressed;
+       
         /*
         if(runPressed && !isMoving)
         {
@@ -136,21 +137,15 @@ public class ThirdPersonMovement : MonoBehaviour
             Debug.Log("jumpTriggered");
             animator.SetBool("Jump", true);
         }
+        
         if (jumpReset)
         {
             animator.SetBool("Jump", false);
         }
+        
 
-        if (!isRunning)
-        {
-            animator.SetBool("Run", false);
-        }
+       
 
-        if (!isMoving)
-        {
-            animator.SetBool("Run", false);
-            animator.SetBool("Walk", false);
-        }
 
         /*
         if(isRunning && jumpPressed)
