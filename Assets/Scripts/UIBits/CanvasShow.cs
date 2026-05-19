@@ -4,6 +4,14 @@ public class CanvasShow : MonoBehaviour
 {
     public GameObject UICanvas;
 
+
+
+    private void Awake()
+    {
+        Time.timeScale = 1.0f;
+    }
+
+
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Triggered with: " + other.name);
@@ -13,5 +21,12 @@ public class CanvasShow : MonoBehaviour
             Debug.Log("Player entred");
             UICanvas.SetActive(true);
         }
+        
+        if(UICanvas.activeSelf == true)
+        {
+            Time.timeScale = 0f;
+        }
+
+       
     }
 }
